@@ -1,0 +1,7 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--white);
+    gap: 10px;
+}

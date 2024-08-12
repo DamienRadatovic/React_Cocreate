@@ -1,0 +1,69 @@
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-height: 80dvh;
+    background-color: var(--background-card);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    border: none;
+}
+
+.modal-container::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    transition: color 0.2s ease-in-out;
+
+    svg {
+        path {
+            fill: var(--white);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+@keyframes modalOpen {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes modalClose {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+}
+
+.modal-container[open] {
+    animation: modalOpen 0.3s ease-out forwards;
+}
+
+.modal-container[closing] {
+    animation: modalClose 0.2s ease-in forwards;
+}

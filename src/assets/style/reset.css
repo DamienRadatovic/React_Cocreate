@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: inherit;
+  color: inherit;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+html {
+  width: 100dvw;
+  overflow-x: hidden;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

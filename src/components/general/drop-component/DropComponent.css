@@ -1,0 +1,5 @@
+.drop-component {
+    -webkit-box-shadow: 0px 0px 15px 1px var(--background-block-opacity);
+    box-shadow: 0px 0px 15px 1px var(--background-block-opacity);
+    z-index: 10;
+}

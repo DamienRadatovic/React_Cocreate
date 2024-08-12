@@ -1,0 +1,36 @@
+.input-text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .focus-svg {
+        svg {
+            path {
+                fill: var(--white);
+            }
+        }
+    }
+
+    .unFocus-svg {
+        svg {
+            path {
+                fill: var(--border-color);
+            }
+        }
+    }
+
+    .search-svg {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    input {
+        &::placeholder {
+            color: var(--border-color);
+        }
+    }
+}

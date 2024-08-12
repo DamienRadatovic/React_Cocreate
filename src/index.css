@@ -1,0 +1,62 @@
+@import "@/assets/style/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --background-general: rgba(12, 21 ,36, 1);
+  --background-block-opacity: rgba(255, 255 ,255, 0.1);
+  --background-card: rgba(48, 54 ,80, 1);
+  --background-block: rgba(18, 32 ,59, 1);
+  --background-block-variation-opacity: rgba(18, 32 ,59, 0.5);
+  --background-block-variation-opacity-minus: rgba(36, 47 , 80, 0.5);
+  --border-color: rgba(129, 145 ,170, 1);
+  --purple: rgba(123, 94 ,234, 1);
+  --purple-opacity: rgba(123, 94 ,234, 0.3);
+  --purple-variation: rgba(109, 96 ,184, 1);
+  --blue: rgba(107, 192 ,254, 1);
+  --green: rgba(61, 215 ,123, 1);
+  --yellow: rgba(254, 197 ,2, 1);
+  --white: rgba(255, 255, 255, 1);
+  --white-opacity: rgba(255, 255, 255, 0.7);
+}
+
+:root {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  color: var(--white);
+  background-color:hsla(217,50%,9%,1);
+  background-image:
+          radial-gradient(at 0% 100%, hsla(240,31%,22%,0.36) 0px, transparent 50%),
+          radial-gradient(at 99% 0%, hsla(240,31%,22%,0.6) 0px, transparent 50%),
+          radial-gradient(at 31% 71%, hsla(229,40%,16%,1) 0px, transparent 50%),
+          radial-gradient(at 81% 66%, hsla(240,31%,22%,0.81) 0px, transparent 50%),
+          radial-gradient(at 55% 18%, hsla(229,39%,16%,1) 0px, transparent 50%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--purple-opacity);
+    border-radius: 25px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 25px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

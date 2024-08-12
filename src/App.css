@@ -1,0 +1,9 @@
+#root {
+    display: flex;
+    justify-content: center;
+    background-color: var(--black);
+    width: 100dvw;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+}

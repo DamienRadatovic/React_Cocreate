@@ -1,0 +1,16 @@
+.project-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    .project-list-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 90px;
+        max-height: 90px;
+        min-height: 90px;
+        border-bottom: 1px solid var(--border-color);
+    }
+}

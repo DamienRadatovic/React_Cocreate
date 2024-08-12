@@ -1,0 +1,22 @@
+.projects-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-block-variation-opacity);
+    padding: 10px 1.709401709%; /* 20px / 1170px */
+
+    .projects-list-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 90px;
+        max-height: 90px;
+        min-height: 90px;
+        border-bottom: 1px solid var(--border-color);
+    }
+}

@@ -1,0 +1,77 @@
+.action-button-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 14px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 8px;
+
+    svg {
+        width: 20px;
+    }
+
+    p {
+        text-wrap: nowrap;
+    }
+}
+
+.simple {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--border-color);
+
+    svg {
+        fill: var(--border-color);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--white);
+
+        svg {
+            fill: var(--white);
+        }
+    }
+}
+
+.fill {
+    background-color: var(--purple);
+    border: 1px solid var(--purple);
+    color: var(--white);
+
+    svg {
+        fill: var(--white);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--purple-variation);
+
+        svg {
+            fill: var(--purple-variation);
+        }
+    }
+}
+
+.stroke {
+    background-color: transparent;
+    border: 1px solid var(--purple-variation);
+    color: var(--purple-variation);
+
+    svg {
+        fill: var(--purple-variation);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--purple);
+        color: var(--white);
+
+        svg {
+            fill: var(--white);
+        }
+    }
+}

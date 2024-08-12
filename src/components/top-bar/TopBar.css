@@ -1,0 +1,75 @@
+.topBar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    box-sizing: border-box;
+    padding-right: 1.709401709%; /* 20px / 1170px */
+
+    .search-container {
+        display: flex;
+        width: 72.08695652%; /* 829px / 1150px */
+    }
+
+    .action-container {
+        display: flex;
+        justify-content: space-between;
+        width: 14.69565217%; /* 169px / 1150px */
+
+        .account {
+            position: relative;
+            display: flex;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+
+            .drop-component {
+                position: absolute;
+                top: 30px;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px 25px;
+                width: 200px;
+                height: fit-content;
+                background-color: var(--background-block);
+                border-radius: 8px;
+                border: 1px solid var(--border-color);
+
+                h3 {
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                overflow: hidden;
+                object-fit: cover;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        .parameter, .notification, .support {
+            display: flex;
+            width: 24px;
+            height: 24px;
+
+            svg {
+                path {
+                    fill: var(--white);
+                }
+            }
+        }
+    }
+}
