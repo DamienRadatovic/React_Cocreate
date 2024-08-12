@@ -159,7 +159,7 @@ const LogElement = ({ log }: Props) => {
                     </thead>
                     <tbody>
                         {
-                            tasksListByLog?.[log.logId].length > 0 ? tasksListByLog?.[log.logId]?.map((task: TaskInterface) => (
+                            tasksListByLog?.[log.logId]?.length > 0 ? tasksListByLog?.[log.logId]?.map((task: TaskInterface) => (
                                 <tr
                                     key={task.taskId}
                                     className="project-container"
