@@ -13,6 +13,7 @@ const TaskItem = ({ task, isSelected, onCheckItem }: Props) => {
         <td className="select">
             <div className="select-container">
                 <CheckBox state={isSelected} onChangSelected={onCheckItem} value={''}/>
+                <div className={`icon ${task.status}`} />
             </div>
         </td>
         <td className="name">{task.name}</td>

@@ -60,6 +60,10 @@
                 font-size: 1.375rem;
                 font-weight: 500;
                 color: var(--white);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 500px;
             }
 
             .user-card-container {

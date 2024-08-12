@@ -13,8 +13,11 @@
   --purple-opacity: rgba(123, 94 ,234, 0.3);
   --purple-variation: rgba(109, 96 ,184, 1);
   --blue: rgba(107, 192 ,254, 1);
+  --blue-opacity: rgba(107, 192 ,254, 0.3);
   --green: rgba(61, 215 ,123, 1);
-  --yellow: rgba(254, 197 ,2, 1);
+  --green-opacity: rgba(61, 215 ,123, 0.3);
+  --yellow: rgb(254, 241, 2, 1);
+  --yellow-opacity: rgba(254, 241, 2, 0.3);
   --white: rgba(255, 255, 255, 1);
   --white-opacity: rgba(255, 255, 255, 0.7);
 }

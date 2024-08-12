@@ -1,7 +1,7 @@
 {
   "name": "cocreate",
   "version": "1.0.0",
-  "description": "Affichage et gestion Front pour des tâches de projet.",
+  "description": "Front display and management for project tasks.",
   "author": "Radatovic Damien",
   "type": "module",
   "scripts": {

@@ -32,7 +32,7 @@ const ProjectFilters = () => {
     return <>
         <div className="project-filters-container">
             <InputText
-                placeholder="Search projects"
+                placeholder="Search task"
                 onChangeValue={handleChangeSearchValue}
             />
             <div className="project-filters-actions-buttons">

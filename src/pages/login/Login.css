@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20vw;
+    width: 400px;
     height: 100dvh;
 
     form {

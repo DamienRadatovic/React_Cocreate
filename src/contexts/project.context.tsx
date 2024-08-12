@@ -38,7 +38,7 @@ const ProjectProvider = ({ children }: { children: ReactNode }) => {
     const setTask = (task: TaskInterface|null): void => {
         setDetailTask(task);
     };
-    
+
     const setProjectById = async (projectId: string): Promise<void> => {
         try {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -66,7 +66,7 @@ const ProjectProvider = ({ children }: { children: ReactNode }) => {
         }
     };
 
-    const changeSelectedTasks = (logId: string, task: TaskInterface, state: boolean): void => {
+    const changeSelectedTasks = async (logId: string, task: TaskInterface, state: boolean): Promise<void> => {
         setSelectedTask((prevSelectedTask) => {
             const currentTasks = prevSelectedTask[logId];
 
@@ -126,7 +126,7 @@ const ProjectProvider = ({ children }: { children: ReactNode }) => {
             console.error(err);
         }
     };
-    
+
     const filterTaskByName = (value: string): void => {
         setTasksListByLog(() => {
             const obj: { [key: string]: TaskInterface[] } = {};
@@ -137,7 +137,7 @@ const ProjectProvider = ({ children }: { children: ReactNode }) => {
             return obj;
         });
     };
-    
+
     const filterByType = (type: FilterProjectEnum, state: boolean): void => {
         switch (type) {
         case FilterProjectEnum.Personal:

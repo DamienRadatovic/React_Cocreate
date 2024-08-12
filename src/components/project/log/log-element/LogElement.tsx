@@ -50,11 +50,11 @@ const LogElement = ({ log }: Props) => {
         return selectedTask[log.logId]?.some((item) => item.taskId === taskId);
     };
 
-    const handleCheckItem = (state: boolean, itemCheck: TaskInterface): void => {
+    const handleCheckItem = async (state: boolean, itemCheck: TaskInterface): Promise<void> => {
+        changeSelectedTasks(log.logId, itemCheck, state);
         if (!state) {
             setIsAllChecked(false);
         }
-        changeSelectedTasks(log.logId, itemCheck, state);
     };
 
     const allUsersInTaskList = (): UserInterface[] => {
@@ -73,13 +73,19 @@ const LogElement = ({ log }: Props) => {
     };
 
     useEffect(() => {
+        if (tasksListByLog[log.logId]?.length === selectedTask[log.logId]?.length && tasksListByLog[log.logId]?.length > 0) {
+            setIsAllChecked(true);
+        }
+    }, [log.logId, selectedTask, tasksListByLog]);
+
+    useEffect(() => {
         try {
             setTaskListByLogId(log.logId);
         } catch (err) {
             console.error(err);
         }
     }, []);
-    
+
     return <>
         <div className="log-element-container">
             <div className="log-header">
@@ -153,7 +159,7 @@ const LogElement = ({ log }: Props) => {
                     </thead>
                     <tbody>
                         {
-                            tasksListByLog?.[log.logId]?.map((task: TaskInterface) => (
+                            tasksListByLog?.[log.logId].length > 0 ? tasksListByLog?.[log.logId]?.map((task: TaskInterface) => (
                                 <tr
                                     key={task.taskId}
                                     className="project-container"
@@ -165,7 +171,7 @@ const LogElement = ({ log }: Props) => {
                                         task={task}
                                     />
                                 </tr>
-                            ))
+                            )) : null
                         }
                     </tbody>
                 </table>

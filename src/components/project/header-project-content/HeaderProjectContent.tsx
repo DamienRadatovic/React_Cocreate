@@ -20,12 +20,38 @@ const HeaderProjectContent = () => {
     return <>
         <div className="project-list-container">
             <div className="project-list-header">
+                <div className="project-type">
+                    <ActionButton onClickButton={() => {
+                    }} type="fill">
+                        <p>Backlog</p>
+                    </ActionButton>
+                    <ActionButton onClickButton={() => {
+                    }} type="empty">
+                        <p>Roadmap</p>
+                    </ActionButton>
+                    <ActionButton onClickButton={() => {
+                    }} type="empty">
+                        <p>Active sprints</p>
+                    </ActionButton>
+                    <ActionButton onClickButton={() => {
+                    }} type="empty">
+                        <p>Releases</p>
+                    </ActionButton>
+                    <ActionButton onClickButton={() => {
+                    }} type="empty">
+                        <p>Reports</p>
+                    </ActionButton>
+                    <ActionButton onClickButton={() => {
+                    }} type="empty">
+                        <p>Tasks</p>
+                    </ActionButton>
+                </div>
                 <ActionButton onClickButton={() => setIsModalOpen(true)} type="stroke">
                     <SvgAddElement/>
                     <p>Create Task</p>
                 </ActionButton>
                 <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                    <TaskForm projectId={project?.projectId} onSendForm={handleSendForm} />
+                    <TaskForm projectId={project?.projectId} onSendForm={handleSendForm}/>
                 </Modal>
             </div>
         </div>

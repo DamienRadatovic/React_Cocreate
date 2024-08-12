@@ -1,12 +1,16 @@
 import './ProjectsHeader.css';
 import { DateTime } from 'luxon';
 import ActionButton from '@/components/general/action-button/ActionButton.tsx';
-import { SvgAddUser } from '@/components/general/svg/SvgComponent.tsx';
+import { SvgAddElement, SvgAddUser } from '@/components/general/svg/SvgComponent.tsx';
 import { useProjects } from '@/contexts/projects.context.tsx';
 
 const ProjectsHeader = () => {
-    const { projects } = useProjects();
-    
+    const { projects, createNewProject } = useProjects();
+
+    const handleClickCreatProject = async (): Promise<void> => {
+        createNewProject();
+    };
+
     return <>
         <div className="projects-header-container">
             <div className="projects-information">
@@ -19,11 +23,17 @@ const ProjectsHeader = () => {
                     <h2>{projects.length}</h2>
                 </div>
             </div>
-            <ActionButton onClickButton={() => {
-            }} type="fill">
-                <SvgAddUser/>
-                <p>Add people</p>
-            </ActionButton>
+            <div className="actions">
+                <ActionButton onClickButton={handleClickCreatProject} type="stroke">
+                    <SvgAddElement />
+                    <p>Create project</p>
+                </ActionButton>
+                <ActionButton onClickButton={() => {
+                }} type="fill">
+                    <SvgAddUser/>
+                    <p>Add people</p>
+                </ActionButton>
+            </div>
         </div>
     </>;
 };

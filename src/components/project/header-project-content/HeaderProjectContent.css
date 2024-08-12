@@ -7,10 +7,14 @@
     .project-list-header {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         height: 90px;
         max-height: 90px;
         min-height: 90px;
         border-bottom: 1px solid var(--border-color);
+
+        .project-type {
+            display: flex;
+        }
     }
 }
